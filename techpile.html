@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techpile website</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="icon" href="images/icon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <style>
+        .tx:hover{
+            color: black;
+        }
+        .cr:hover{
+            background: url(images/hover.png);
+            background-size: 100% 100%;
+            transform: scale(1.1);
+            transition: all 1.8s;
+            
+            border-image: fill 0 linear-gradient(rgba(227, 225, 225, 0.2),rgb(237, 237, 242));
+        }
+        #preloader {
+            background: rgb(247, 241, 241) no-repeat center center;
+            background-size: 90%;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+            background: orange;
+        }
+
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: orange;
+        }
+
+        .rg {
+            background: rgba(0, 0, 0, 0.8);
+            height: 350px;
+            width: 100%;
+        }
+
+        .img {
+            background: url(images/foot.jpg);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        .ho1:hover {
+            background: url(images/hover.png);
+            background-size: cover;
+            backdrop-filter: 50px;
+            border-radius: 3px;
+            transition: all 0.8s;
+            /* color: white; */
+            border-image: fill 0 linear-gradient(#0003,rgb(237, 237, 242));
+            transform: scale(1.1);
+            /* background: rgba(0, 0, 0, 0.8); */
+
+
+        }
+
+        .ho2:hover {
+            color: white;
+            border: 1px solid white;
+        }
+
+        .u1 ul li {
+            display: inline-block;
+            width: 60px;
+            font-size: 12px;
+            color: black;
+            text-decoration: none;
+
+        }
+
+
+        #ani1 {
+            animation: a 0.5s linear 1 alternate;
+        }
+
+        @keyframes a {
+            0% {
+                /* left: 10px; */
+                margin-left: 10px;
+            }
+
+            100% {
+                /* left: 0px; */
+                margin-left: -0px;
+            }
+        }
+
+        #ani2 {
+            animation: b 0.5s 1s linear 1 alternate;
+        }
+
+        @keyframes b {
+            0% {
+                margin-top: 0px;
+            }
+
+            100% {
+                margin-top: -130px;
+            }
+        }
+
+        .ani3 {
+            animation: c 1s 1s linear 1 alternate;
+        }
+
+        @keyframes c {
+            0% {
+                /* margin-top: 0px; */
+                transform: perspective(2000px)rotateY(90deg);
+            }
+
+            100% {
+                /* margin-top: -130px; */
+
+                transform: perspective(2000px)rotateY(0deg);
+            }
+        }
+
+        #ani4 {
+            animation: d 1s 2s linear 1 alternate;
+        }
+
+        @keyframes d {
+            0% {
+                /* margin-top: 0px; */
+                /* transform: perspective(2000px)rotateY(90deg); */
+                transform: translateX(50px);
+                opacity: 0;
+            }
+
+            100% {
+                /* margin-top: -130px; */
+                transform: translateX(0px);
+                opacity: 1;
+                /* transform: perspective(2000px)rotateY(0deg); */
+            }
+        }
+
+        #ani5 {
+            animation: e 1s 1.5s linear 1 alternate;
+        }
+
+        @keyframes e {
+            0% {
+                /* margin-top: 0px; */
+                /* transform: perspective(2000px)rotateY(90deg); */
+                /* transform: translateX(50px); */
+                opacity: 0;
+            }
+
+            100% {
+                /* margin-top: -130px; */
+                /* transform: translateX(0px); */
+                opacity: 1;
+                /* transform: perspective(2000px)rotateY(0deg); */
+            }
+        }
+
+        #ani6 {
+            animation: e 1.5s 3s linear 1 alternate;
+        }
+
+        @keyframes e {
+            0% {
+                transform: perspective(2000px)rotateY(50deg);
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                transform: perspective(2000px)rotateY(0deg);
+            }
+        }
+
+        #ani7 {
+            animation: f 3s 3s linear 1 alternate;
+        }
+
+        @keyframes f {
+            0% {
+                transform: perspective(2000px)rotateY(50deg);
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                transform: perspective(2000px)rotateY(0deg);
+            }
+        }
+
+        #ani8 {
+            animation: g 0.5s 3.5s linear 1 alternate;
+        }
+
+        @keyframes g {
+            0% {
+                transform: perspective(2000px)rotateX(50deg);
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                transform: perspective(2000px)rotateX(0deg);
+            }
+        }
+
+        #ani9 {
+            animation: h 0.5s 4s linear 1 alternate;
+        }
+
+        @keyframes h {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                display: none;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+                display: inline-block;
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani10 {
+            animation: i 0.5s 4.5s linear 1 alternate;
+        }
+
+        @keyframes i {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani11 {
+            animation: j 0.5s 5s linear 1 alternate;
+        }
+
+        @keyframes j {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani12 {
+            animation: k 0.5s 5.5s linear 1 alternate;
+        }
+
+        @keyframes k {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani13 {
+            animation: l 0.5s 6s linear 1 alternate;
+        }
+
+        @keyframes l {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani14 {
+            animation: m 0.5s 6.5s linear 1 alternate;
+        }
+
+        @keyframes m {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani15 {
+            animation: m 0.5s 7s linear 1 alternate;
+        }
+
+        @keyframes m {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani16 {
+            animation: m 0.5s 7.5s linear 1 alternate;
+        }
+
+        @keyframes m {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani17 {
+            animation: m 0.5s 8s linear 1 alternate;
+        }
+
+        @keyframes m {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani18 {
+            animation: m 0.5s 8.5s linear 1 alternate;
+        }
+
+        @keyframes m {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani19 {
+            animation: m 0.5s 9s linear 1 alternate;
+        }
+
+        @keyframes m {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        #ani20 {
+            animation: m 0.5s 9.5s linear 1 alternate;
+        }
+
+        @keyframes m {
+            0% {
+                /* transform: perspective(2000px)rotateX(50deg); */
+                margin-left: -30px;
+                height: 60px;
+                opacity: 0.1;
+            }
+
+            100% {
+
+                /* font-size: 10px; */
+                opacity: 1;
+                height: 45px;
+                margin-left: 0px;
+                /* transform: perspective(2000px)rotateX(0deg); */
+            }
+        }
+
+        .ani22 {
+            animation: x 4.5s linear 2s 1 alternate;
+
+        }
+
+        @keyframes x {
+            0% {
+                /* margin-left: 0px; */
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+                /* margin-left: 20px; */
+            }
+        }
+
+        .card1 {
+            transition: all 2s;
+        }
+
+        .card1:hover {
+            background: url(images/gif2.gif);
+            transition: all 5s;
+            transform: scale(1.1);
+            font-weight: bold;
+        }
+
+        .spinner {
+            height: 90px;
+            width: 90px;
+            border: 1px solid gray;
+            border-radius: 50%;
+        }
+
+        .spin1 {
+            height: 90px;
+            width: 90px;
+            border-top: 2px solid orange;
+            border-radius: 50%;
+            animation: a1 2s linear infinite;
+        }
+
+        @keyframes a1 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #t1 {
+            animation: ta1 1s infinite;
+        }
+
+        @keyframes ta1 {
+            0% {
+                color: orange;
+            }
+
+            100% {
+
+                color: gray;
+            }
+        }
+
+        #t2 {
+            animation: ta2 1.2s infinite;
+        }
+
+        @keyframes ta2 {
+            0% {
+                color: orange;
+            }
+
+            100% {
+
+                color: gray;
+            }
+        }
+
+        #t3 {
+            animation: ta3 1.4s infinite;
+        }
+
+        @keyframes ta3 {
+            0% {
+                color: orange;
+            }
+
+            100% {
+
+                color: gray;
+            }
+        }
+
+        #t4 {
+            animation: ta4 1.6s infinite;
+        }
+
+        @keyframes ta4 {
+            0% {
+                color: orange;
+            }
+
+            100% {
+
+                color: gray;
+            }
+        }
+
+        #t5 {
+            animation: ta5 1.8s infinite;
+        }
+
+        @keyframes ta5 {
+            0% {
+                color: orange;
+            }
+
+            100% {
+
+                color: gray;
+            }
+        }
+
+        #t6 {
+            animation: ta6 2s infinite;
+        }
+
+        @keyframes ta6 {
+            0% {
+                color: orange;
+            }
+
+            100% {
+
+                color: gray;
+            }
+        }
+
+        #t7 {
+            animation: ta7 2.2s infinite;
+        }
+
+        @keyframes ta7 {
+            0% {
+                color: orange;
+            }
+
+            100% {
+
+                color: gray;
+            }
+        }
+
+        #t8 {
+            animation: ta8 2.4s infinite;
+        }
+
+        @keyframes ta8 {
+            0% {
+                color: orange;
+            }
+
+            100% {
+
+                color: gray;
+            }
+        }
+
+        .bb:hover {
+            color: orange;
+            /* background-color: red; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <div style="min-height: 200px;" class="row">
+            <div class="col-sm-12"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 mx-auto text-center">
+                <div class="spinner ms-5">
+                    <div class="spin1"></div>
+
+                </div>
+                <div style="font-size: 30px;font-weight: bold;color: gray;">
+                    <span id="t1">T</span>
+                    <span id="t2">E</span>
+                    <span id="t3">C</span>
+                    <span id="t4">H</span>
+                    <span id="t5">P</span>
+                    <span id="t6">I</span>
+                    <span id="t7">L</span>
+                    <span id="t8">E</span>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="min-height: 30px;background-color: #f1f3f4;" class="row ">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-7">
+            <span class="bb" style="font-size: 10px;color: gray;">Helpline No: +917236941897 |+91 7052124512 |
+                +918052124578 |
+                techpilelko@gmai.com</span>
+        </div>
+        <div style="font-size: 15px;" class="col-sm-4">
+            <i class="bb ps-3 fa-brands fa-facebook"></i>
+            <i class="bb ps-3 fa-brands fa-twitter"></i>
+            <i class="bb ps-3 fa-brands fa-instagram"></i>
+            <i class="bb ps-3 fa-brands fa-whatsapp"></i>
+            <i class="bb ps-3 fa-brands fa-youtube"></i>
+        </div>
+    </div>
+    <div style="min-height: 40px;" class="row border ">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+            <img style="height: 40px" src="images/logo.png" alt="">
+        </div>
+        <div class="col-sm-8 u1 pt-2 fw-bold">
+            <ul>
+                <a class="bb" href="#">
+                    <li style="color: orange;">Home</li>
+                </a>
+                <a href="#">
+                    <li>About Us</li>
+                </a>
+                <a href="#">
+                    <li>Register</li>
+                </a>
+                <a href="#">
+                    <li>Course</li>
+                </a>
+                <a href="#">
+                    <li>Training</li>
+                </a>
+                <a href="#">
+                    <li>Placement</li>
+                </a>
+                <a href="#">
+                    <li>Gallery</li>
+                </a>
+                <a href="#">
+                    <li>Contact</li>
+                </a>
+                <a href="#">
+                    <li>Feedback</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div style="min-height: 450px;" class="row ">
+        <div style="background-color: #09acf5;" class="col-sm-12">
+            <div style="min-height: 450px;" class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+
+                    <img id="ani4" style="height: 70px;" class="img-fluide" src="images/slider5.png" alt="">
+                    <img id="ani5" class="ps-5 pt-5" style="height: 100px;" src="images/slider4.png" alt="">
+                    <div>
+                        <img id="ani1" style="height: 200px;" src="images/slider1.png" alt="">
+                    </div>
+                    <div>
+                        <img class="img-fluide ani3" style="height: 100px;margin-top: -110px;margin-left: 200px;"
+                            src="images/slider3.png" alt="">
+                    </div>
+                    <div>
+                        <img id="ani2" style="height: 110px;margin-top: -150px;margin-left: -50px;"
+                            src="images/slider2.png" alt="">
+                    </div>
+
+                </div>
+                <div class="col-sm-5">
+                    <div class="pt-5">
+                        <div id="ani6" class="fs-2 text-light">SUMMER TRAINING</div>
+                        <br>
+                        <span id="ani7" style="color: #00354a;" class="fs-5">B.Tech(CS/IT) || Diploma(CS/IT)
+                            ||BCA</span>
+                        <br>
+                        <br>
+                        <div id="ani8">
+                            <span class="text-light">Summer training program to enhance</span><br>
+                            <span class="text-light">your knowledge to the next level and to make you.</span><br>
+                            <span class="text-light">effience to work with a repulated organization</span><br>
+                            <span class="fw-bold" style="color: orange;">CODE YOUR PROSPEREOUS CAREER</span>
+                        </div>
+                        <img class="img-fluide" id="ani9" style="height: 45px;" src="images/andriod.png" alt="">
+                        <img class="img-fluide" id="ani10" style="height: 45px;" src="images/python.png" alt="">
+                        <img class="img-fluide" id="ani11" style="height: 45px;" src="images/java.png" alt="">
+                        <img class="img-fluide" id="ani12" style="height: 45px;" src="images/net.png" alt="">
+                        <img class="img-fluide" id="ani13" style="height: 45px;" src="images/php.png" alt="">
+                        <img class="img-fluide" id="ani14" style="height: 45px;" src="images/hyper.png" alt="">
+                        <br><br>
+
+                        <img id="ani15" style="height: 45px;" src="images/angular.png" alt="">
+                        <img id="ani16" style="height: 45px;" src="images/boot.png" alt="">
+                        <img id="ani17" style="height: 45px;" src="images/c++.png" alt="">
+                        <img id="ani18" style="height: 45px;" src="images/csharp.png" alt="">
+                        <img id="ani19" style="height: 45px;" src="images/andriod.png" alt="">
+                        <img id="ani20" style="height: 45px;" src="images/angular.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="min-height: 80px;" class="row ">
+
+        <div style="background-color: #f1f3f4;" class="col-sm-12 ">
+            <div class="text-center pt-2">
+                <span style="color: orange;" class="fs-5">Training</span>
+                <span style="border-bottom: 1px solid orange;" class="fs-4">at</span>
+                <span class="fs-4">Techpile</span>
+                <br>
+                <!-- <p style="border-bottom: 2px solid orange;width: 80px;margin-left: 47%;"></p> -->
+                <p style="font-size: 13px;color: gray;">Enter As Triggers Exite As Professionals</p>
+            </div>
+        </div>
+
+    </div>
+    <div style="background-color: #f1f3f4;" class="row">
+        <div class="col-sm-10 mx-auto ">
+            <div style="min-height: 120px;" class="row ">
+                <div  class="col-sm-2  gx-5 ">
+                    <div style="min-height: 110px;border-radius: 5px;background-color: #007bff;" class="row ">
+                        <div style="border-radius: 5px;" class="col-sm-12 pt-4 cr  ">
+
+
+                            <span class="text-light " style="font-size: 12px;font-weight: bold;">SUMMER TRAINING</span>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2  gx-5">
+                    <div style="border-radius: 5px; min-height: 110px;background-color: #28a745;" class="row ">
+                        <div class="col-sm-12 text-center pt-4 cr">
+
+
+                            <span class="text-light fw-bold tx" style="font-size: 12px;">WINTER TRAINING</span>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2  gx-5">
+                    <div style="border-radius: 5px; min-height: 110px;background-color: #6c757d;" class="row ">
+                        <div class="col-sm-12 text-center pt-4 cr">
+
+
+                            <span class="fw-bold text-light tx" style="font-size: 12px;">APPERNTSHIP TRAINING</span>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2  gx-5">
+                    <div style="border-radius: 5px; min-height: 110px;background-color: #ffc107;" class="row ">
+                        <div class="col-sm-12 pt-4 text-center cr">
+
+
+                            <span class="fw-bold text-light tx" style="font-size: 12px;">SALLABUS TRAINING</span>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2  gx-5">
+                    <div style="min-height: 110px;background-color: #17a2b8;border-radius: 5px;" class="row ">
+                        <div class="col-sm-12 text-center pt-4 cr">
+
+
+                            <span class="fw-bold text-light tx" style="font-size: 12px;">INDUSTRIAL TRAINING</span>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2  gx-5">
+                    <div style="min-height: 110px;background-color: #343a40;border-radius: 5px;" class="row ">
+                        <div class="col-sm-12 pt-4 text-center cr">
+
+
+                            <span class="fw-bold text-light tx" style="font-size: 12px;">PD & SKILL PROGRAM</span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="min-height: 150px;" class="row">
+        <div class="col-sm-6 mx-auto p-4">
+            <div class="text-center">
+                <span class="fs-4" style="color: orange;">Techpile</span>
+                <span class="fs-4">In Web</span>
+                <span class="fs-4" style="border-bottom: 2px solid orange;">Designing</span>
+                <span class="fs-4">& Devlopment</span>
+                <br>
+                <span style="font-size: 12px;color: gray;font-weight: bold;">
+                    Our services are designed to take your business to the next level. Reducing the gap between you
+
+
+
+                    and the heights of success you wish to archive your life
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <div style="min-height: 350px;" class="row  p-3">
+        <div class="col-sm-10 mx-auto">
+            <div class="row">
+                <div class="col-sm-6 pt-3">
+                    <iframe width="100%" height="315"
+                        src="https://www.youtube.com/embed/YKK2IvD11YU?si=XYSidXquEMuV4FJm" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-sm-6 p-2">
+                    <div class="row">
+                        <div class="col-sm-2 pt-3">
+                            <i style="background-color: rgb(236, 154, 1);border-radius: 50%;"
+                                class="fa-solid fa-code  text-light p-2"></i>
+                        </div>
+                        <div class="col-sm-10">
+                            <span class="fs-5 fw-bold">
+                                Best in Website & Web Devlopment
+                            </span><br>
+
+                            <span style="font-size: 12px;">Website have become a basic requirment for every business
+                                today at Techpile we</span>
+                            <span style="font-size: 12px;">
+                                Offer website Design and Devlopment service which will play pivotal rate in your
+                            </span>
+                            <span style="font-size: 12px;">
+                                Business on the internal by building a suprior website for your computer
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 pt-3">
+                            <!-- <i style="border-radius: 70%;height: 30%;width: 60%;padding-top: 11px;padding-left: 8px;background-color: rgb(236, 154, 1);"
+                                class="fa-solid fa-code   text-light"></i> -->
+
+                            <i style="background-color: rgb(236, 154, 1);border-radius: 50%;"
+                                class="fa-solid fa-database  text-light p-2"></i>
+                        </div>
+                        <div class="col-sm-10">
+                            <span class="fs-5 fw-bold">
+                                Best in Website & Web Devlopment
+                            </span><br>
+
+                            <span style="font-size: 12px;">Website have become a basic requirment for every business
+                                today at Techpile we</span>
+                            <span style="font-size: 12px;">
+                                Offer website Design and Devlopment service which will play pivotal rate in your
+                            </span>
+                            <span style="font-size: 12px;">
+                                Business on the internal by building a suprior website for your computer
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 pt-3">
+                            <!-- <i style="border-radius: 70%;height: 30%;width: 60%;padding-top: 11px;padding-left: 8px;background-color: rgb(236, 154, 1);"
+                                class="fa-solid fa-code   text-light"></i> -->
+
+                            <i style="background-color: rgb(236, 154, 1);border-radius: 50%;"
+                                class="fa-solid fa-laptop  text-light p-2"></i>
+                        </div>
+                        <div class="col-sm-10">
+                            <span class="fs-5 fw-bold">
+                                Best in Website & Web Devlopment
+                            </span><br>
+
+                            <span style="font-size: 12px;">Website have become a basic requirment for every business
+                                today at Techpile we</span>
+                            <span style="font-size: 12px;">
+                                Offer website Design and Devlopment service which will play pivotal rate in your
+                            </span>
+                            <span style="font-size: 12px;">
+                                Business on the internal by building a suprior website for your computer
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #f1f3f4;" class="row">
+        <div class="col-sm-6 mx-auto p-4">
+            <div class="text-center">
+                <span class="fs-4" style="color: orange;">Amazing</span>
+
+                <span class="fs-4" style="border-bottom: 2px solid orange;">Training</span>
+                <span class="fs-4">Program</span>
+                <br>
+                <span style="font-size: 12px;color: gray;font-weight: bold;">
+                    Our services are designed to take your business to the next level. Reducing the gap between you
+
+
+
+                    and the heights of success you wish to archive your life
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #f1f3f4;" class="row p-5">
+        <div class="col-sm-10 mx-auto">
+            <div class="row">
+                <div class="col-sm-4 ">
+                    <div class="row gx-2">
+                        <div style="transition: all 3s;" class="col-sm-12 bg-light ho1">
+                            <i style="position: absolute;margin-top: -10px;margin-left: 20px;height: 35px;width: 35px;padding: 6px;border-radius: 50%;color: white;background-color: rgb(236, 154, 1);"
+                                class="fa-solid fa-laptop"></i>
+                            <div style="border-radius: 3px;" class=" p-4">
+
+                                <span style="font-size: 20px;">Summer Training(45-60)Days</span>
+                                <br>
+                                <span style="font-size: 12px;">Techpile Offers you can apprentship Training Program
+                                    with an objetcion to enhance the knowledge of the students on diffrent cutting edge
+                                    technologies
+                                    for the B.Tech(CS/IT)BCA.MCA students
+                                </span>
+                                <br>
+                                <br>
+                                <!-- <input  value="Know More" style=" height: 30px;width: 35%;" type="submit"> -->
+                                <input class="btn btn-outline-dark" value="Know more" type="submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 ">
+                    <div class="row gx-2">
+                        <div style="transition: all 3s;" class="col-sm-12 bg-light ho1">
+                            <i style="position: absolute;margin-top: -10px;margin-left: 20px;height: 35px;width: 35px;padding: 6px;border-radius: 50%;color: white;background-color: rgb(236, 154, 1);"
+                                class="fa-solid fa-laptop"></i>
+                            <div style="border-radius: 3px;" class=" p-4">
+
+                                <span style="font-size: 20px;">Summer Training(45-60)Days</span>
+                                <br>
+                                <span style="font-size: 12px;">Techpile Offers you can apprentship Training Program
+                                    with an objetcion to enhance the knowledge of the students on diffrent cutting edge
+                                    technologies
+                                    for the B.Tech(CS/IT)BCA.MCA students
+                                </span>
+                                <br>
+                                <br>
+                                <!-- <input  value="Know More" style=" height: 30px;width: 35%;" type="submit"> -->
+                                <input class="btn btn-outline-dark" value="Know more" type="submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 ">
+                    <div class="row gx-2">
+                        <div style="transition: all 3s;" class="col-sm-12 bg-light ho1">
+                            <i style="position: absolute;margin-top: -10px;margin-left: 20px;height: 35px;width: 35px;padding: 6px;border-radius: 50%;color: white;background-color: rgb(236, 154, 1);"
+                                class="fa-solid fa-laptop"></i>
+                            <div style="border-radius: 3px;" class=" p-4">
+
+                                <span style="font-size: 20px;">Summer Training(45-60)Days</span>
+                                <br>
+                                <span style="font-size: 12px;">Techpile Offers you can apprentship Training Program
+                                    with an objetcion to enhance the knowledge of the students on diffrent cutting edge
+                                    technologies
+                                    for the B.Tech(CS/IT)BCA.MCA students
+                                </span>
+                                <br>
+                                <br>
+                                <!-- <input  value="Know More" style=" height: 30px;width: 35%;" type="submit"> -->
+                                <input class="btn btn-outline-dark" value="Know more" type="submit">
+                            </div>
+                        </div>
+                    </div>
+                    <iframe width="0" height="0" src="https://www.youtube.com/embed/MglNbe2vHTw?si=eCxBk7QNIYvByoGs"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #f1f3f4;" class="row pt-1 p-5">
+        <div class="col-sm-10 mx-auto">
+            <div class="row">
+                <div class="col-sm-4 ">
+                    <div class="row gx-2">
+                        <div style="transition: all 3s;" class="col-sm-12 bg-light ho1">
+                            <i style="position: absolute;margin-top: -10px;margin-left: 20px;height: 35px;width: 35px;padding: 6px;border-radius: 50%;color: white;background-color: rgb(236, 154, 1);"
+                                class="fa-solid fa-laptop"></i>
+                            <div style="border-radius: 3px;" class=" p-4">
+
+                                <span style="font-size: 20px;">Summer Training(45-60)Days</span>
+                                <br>
+                                <span style="font-size: 12px;">Techpile Offers you can apprentship Training Program
+                                    with an objetcion to enhance the knowledge of the students on diffrent cutting edge
+                                    technologies
+                                    for the B.Tech(CS/IT)BCA.MCA students
+                                </span>
+                                <br>
+                                <br>
+                                <!-- <input  value="Know More" style=" height: 30px;width: 35%;" type="submit"> -->
+                                <input class="btn btn-outline-dark" value="Know more" type="submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 ">
+                    <div class="row gx-2">
+                        <div style="transition: all 3s;" class="col-sm-12 bg-light ho1">
+                            <i style="position: absolute;margin-top: -10px;margin-left: 20px;height: 35px;width: 35px;padding: 6px;border-radius: 50%;color: white;background-color: rgb(236, 154, 1);"
+                                class="fa-solid fa-laptop"></i>
+                            <div style="border-radius: 3px;" class=" p-4">
+
+                                <span style="font-size: 20px;">Summer Training(45-60)Days</span>
+                                <br>
+                                <span style="font-size: 12px;">Techpile Offers you can apprentship Training Program
+                                    with an objetcion to enhance the knowledge of the students on diffrent cutting edge
+                                    technologies
+                                    for the B.Tech(CS/IT)BCA.MCA students
+                                </span>
+                                <br>
+                                <br>
+                                <input class="btn btn-outline-dark" value="Know more" type="submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 ">
+                    <div class="row gx-2">
+                        <div style="transition: all 3s;" class="col-sm-12 bg-light ho1">
+                            <i style="position: absolute;margin-top: -10px;margin-left: 20px;height: 35px;width: 35px;padding: 6px;border-radius: 50%;color: white;background-color: rgb(236, 154, 1);"
+                                class="fa-solid fa-laptop"></i>
+                            <div style="border-radius: 3px;" class=" p-4 ">
+
+                                <span style="font-size: 20px;">Summer Training(45-60)Days</span>
+                                <br>
+                                <span style="font-size: 12px;">Techpile Offers you can apprentship Training Program
+                                    with an objetcion to enhance the knowledge of the students on diffrent cutting edge
+                                    technologies
+                                    for the B.Tech(CS/IT)BCA.MCA students
+                                </span>
+                                <br>
+                                <br>
+                                <!-- <input  value="Know More" style=" height: 30px;width: 35%;" type="submit"> -->
+                                <input class="btn btn-outline-dark ho2" value="Know more" type="submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div style="min-height: 340px;" class="row">
+        <div class="col-sm-12 img">
+            <div class="rg">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="text-light text-center pt-5">
+                                    <span class="fs-4 fw-bold">
+                                        Also avilable on Google Play store
+                                    </span>
+                                    <br>
+                                    <span class="text-warning fs-4">Techpile</span>
+
+                                    <span style="border-bottom: 2px solid orange;"
+                                        class="text-warning fs-4">learning</span>
+                                    <span class="text-warning fs-4">App.</span>
+                                    <br>
+                                    <span style="font-weight: bold;font-size: 12px;color: rgb(233, 227, 227);">Download
+                                        applocatin and grow your knowledge</span>
+                                    <br>
+                                    <br>
+                                    <img style="height: 50px;" class="img-fluide" src="images/g1.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="ps-5">
+                                    <img style="width: 68%;" class="img-fluide" src="images/phone.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-10 mx-auto">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            
+                        </div>
+                        <div class="col-sm-5"></div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #2a2d2f;" class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-7 mx-auto">
+                    <div style="min-height: 230px;" class="row ">
+                        <div class="col-sm-4">
+                            <div class="p-4">
+                                <img style="height: 60px;" class="img-fluide pb-2" src="images/google2.webp" alt=""><br>
+                                <img style="height: 60px;" class="img-fluide pb-2" src="images/google2.webp" alt=""><br>
+                                <img style="height: 60px;" class="img-fluide pb-2" src="images/google2.webp" alt=""><br>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="p-3" style="font-size: 12px;color: rgb(199, 195, 195);">
+                                <span class="fs-5 fw-bold" style="border-bottom: 2px solid white;color: white;">Contact </span> <span style="color: black;color: white" class="fs-5 fw-bold">Address</span>
+                                <br>
+                                <i class="fa-solid fa-home"></i>
+                                <span>plote No-43,Behind H.P Petrol Pump,</span>
+                                <br>
+                                <span>Tehdi puliya Ring road Rd,sector 5</span>
+                                <br>
+                                <span>Vikash nagar, Lucknow,</span>
+                                <br>
+                                <span>Uttar Pradesh 226022</span>
+                                <br><br>
+                                <i class="fa-solid fa-phone"></i>
+                                +7236941897 <br>
+                                <i class="fa-solid fa-phone"></i>
+                                +7236941897 <br>
+                                
+                                <i class="fa-solid fa-message"></i>
+                                techpilelko@gmail.com
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="p-3" style="font-size: 13px;color: rgb(199, 195, 195);">
+                                <img style="height: 40px;" src="images/whitelogopng.png" alt="">
+                                <br>
+                                <span>
+                                    Techpile is an organization working in both Software Devlopment and Software Training which
+                                    aims to make all its  clietns feel spacial and help them to become succesfully
+                                </span>
+                                <br>
+                                <br>
+                                <span style="border-bottom: 2px solid white;" class="fw-bold text-light">Stay</span> <span class="fw-bold text-light">Connected</span>
+                                <br>
+                                <i class="text-light fa-brands fa-facebook"></i>&nbsp;&nbsp;
+                                <i class="text-light fa-brands fa-instagram"></i>&nbsp;&nbsp;
+                                <i class="text-light fa-brands fa-twitter"></i>&nbsp;&nbsp;
+                                <i class="text-light fa-brands fa-whatsapp"></i>&nbsp;&nbsp;
+                                <i class="text-light fa-brands fa-youtube"></i>&nbsp;&nbsp;
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+    </script>
+</body>
+
+</html>
